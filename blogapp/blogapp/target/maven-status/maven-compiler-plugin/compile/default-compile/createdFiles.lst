@@ -1,0 +1,12 @@
+it/tss/blogapp/ConstraintViolationExceptionMapper.class
+it/tss/blogapp/control/PostStore.class
+it/tss/blogapp/entity/Tag.class
+it/tss/blogapp/entity/BaseEntity.class
+it/tss/blogapp/entity/User.class
+it/tss/blogapp/entity/Post.class
+it/tss/blogapp/entity/Comment.class
+it/tss/blogapp/boundary/UsersResource.class
+it/tss/blogapp/boundary/PostResource.class
+it/tss/blogapp/PingResource.class
+it/tss/blogapp/control/UserStore.class
+it/tss/blogapp/JAXRSConfiguration.class
