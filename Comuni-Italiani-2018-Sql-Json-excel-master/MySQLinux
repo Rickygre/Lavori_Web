@@ -1,0 +1,43 @@
+
+#EXPORT database da linea di comando
+
+mysqldump -u tss -p "nome database" > percorso file(ex /home/tss/Documenti/"nomefiledump.sql"
+
+-----------------------------------------------------
+
+#IMPORT database da linea di comando
+
+#crea database da mariadb o mysql con il comando:
+create database "nome database";
+
+#importa il database con:
+
+mysql -utss -p "nome database" < /home/tss/Documenti/"nomefiledump.sql" 
+
+
+---------- backup automatico di database ------------
+
+sudo apt-get install automysqlbackup
+
+-----------------------------------------------------
+
+#crea utente
+
+CREATE USER 'nomeutente'@localhost IDENTIFIED BY 'passwordutente';
+
+#permessi
+GRANT ALL PRIVILEGES ON * . * TO 'nomeutente'@'localhost';
+ 
+FLUSH PRIVILEGES;
+
+
+-----------Per importare anche le procedure-----------
+aggiungere --routines= true dopo mysqldump
+
+--------In caso di problemi a importare con le routines------
+1) rimuovere NO_AUTO_CREATE_USER dal file dump
+2) loggare in mysql/mariadb 
+3) SET GLOBAL log_bin_trust_function_creators = 1;
+4) riprovare a importare il file.
+
+
