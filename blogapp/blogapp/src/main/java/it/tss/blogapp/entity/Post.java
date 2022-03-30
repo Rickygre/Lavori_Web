@@ -4,8 +4,11 @@
  */
 package it.tss.blogapp.entity;
 
+import it.tss.blogapp.boundary.PostsResource;
 import java.time.LocalDateTime;
 import java.util.Set;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,6 +17,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.ws.rs.core.UriBuilder;
 
 /**
  *
@@ -91,6 +95,25 @@ public class Post extends BaseEntity {
     @Override
     public String toString() {
         return "Post{" + "id=" + id + ", created=" + created + ", author=" + author + ", title=" + title + ", body=" + body + ", tags=" + tags + '}';
+    }
+
+    
+    
+       public String getLink() {
+        return UriBuilder.fromResource(PostsResource.class)
+                .path(PostsResource.class, "find")
+                .build(this.id).toString();
+    }
+    
+    
+    
+    
+    public JsonObject toJsonSlice() {
+        
+        return Json.createObjectBuilder()
+                .add("id", this.id)
+                .add("title", this.title)
+                .build();
     }
     
     

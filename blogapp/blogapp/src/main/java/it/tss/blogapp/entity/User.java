@@ -1,9 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.tss.blogapp.entity;
 
+import it.tss.blogapp.boundary.UsersResource;
+import javax.json.Json;
+import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
@@ -13,6 +13,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import javax.ws.rs.NotSupportedException;
+import javax.ws.rs.core.UriBuilder;
 
 /**
  *
@@ -80,6 +81,16 @@ public class User extends BaseEntity {
     @Override
     public String toString() {
         return "User{" + "id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", pwd=" + pwd + '}';
+    }
+
+    public JsonObject toJsonSlice() {
+        
+        return Json.createObjectBuilder()
+                .add("id", this.id)
+                .add("link", UriBuilder.fromResource(UsersResource.class)
+                        .path(UsersResource.class,"find")
+                        .build(this.id).toString())
+                .build();
     }
 
 }
