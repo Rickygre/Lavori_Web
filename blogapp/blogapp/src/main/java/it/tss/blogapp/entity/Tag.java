@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.tss.blogapp.entity;
 
 import javax.persistence.Column;
@@ -19,6 +16,10 @@ public class Tag extends BaseEntity {
     @Column(nullable = false)
     private String name;
 
+    public Tag(String tag) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     /*
     getter setter
      */
@@ -35,4 +36,6 @@ public class Tag extends BaseEntity {
         return "Tag{" + "id=" + id + ", name=" + name + '}';
     }
 
+    
+    
 }
