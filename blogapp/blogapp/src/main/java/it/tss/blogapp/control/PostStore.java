@@ -24,6 +24,9 @@ public class PostStore {
 
     @Inject
     TagStore tagStore;
+    
+    @Inject
+    CommentStore commentstore;
 
     public List<Post> all() {
         return em.createQuery("select e from Post e order by e.created DESC")
@@ -65,5 +68,12 @@ public class PostStore {
             save(toupdate);
         }
     }
-
+    
+    public void deleteByUser(Long id){
+        byUser(id).stream().map(Post::getId).forEach(this::delete);
+    }
+    
+    
+  
+    
 }

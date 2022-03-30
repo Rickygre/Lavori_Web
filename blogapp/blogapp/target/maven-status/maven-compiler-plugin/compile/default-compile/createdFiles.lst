@@ -9,9 +9,10 @@ it/tss/blogapp/entity/Post.class
 it/tss/blogapp/entity/Comment.class
 it/tss/blogapp/adapters/PostTypeAdapter.class
 it/tss/blogapp/boundary/UsersResource.class
-it/tss/blogapp/boundary/PostResource.class
+it/tss/blogapp/control/TagStore.class
 it/tss/blogapp/boundary/PostsResource.class
 it/tss/blogapp/PingResource.class
+it/tss/blogapp/boundary/TagsResources.class
 it/tss/blogapp/control/UserStore.class
 it/tss/blogapp/boundary/CommentsResource.class
 it/tss/blogapp/JAXRSConfiguration.class

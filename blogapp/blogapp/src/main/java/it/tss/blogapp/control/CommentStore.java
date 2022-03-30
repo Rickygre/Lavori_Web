@@ -3,6 +3,7 @@ package it.tss.blogapp.control;
 
 
 import it.tss.blogapp.entity.Comment;
+import it.tss.blogapp.entity.Post;
 import java.util.List;
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
@@ -40,4 +41,9 @@ public class CommentStore {
         Comment found = find(id).orElseThrow(() -> new NotFoundException());
         em.remove(found);
     }
+    
+      public void deleteByUser(Long id){
+        byPost(id).stream().map(Comment::getId).forEach(this::delete);
+    }
+    
 }
