@@ -13,7 +13,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 public class PingResource {
 
     @Inject
-    @ConfigProperty(name = "message")
+    @ConfigProperty(name = "ping.message")
     String message;    
 
     @GET

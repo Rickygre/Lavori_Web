@@ -5,14 +5,12 @@ import it.tss.blogapp.boundary.UsersResource;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.bind.annotation.JsonbProperty;
-import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import javax.ws.rs.NotSupportedException;
 import javax.ws.rs.core.UriBuilder;
 
 /**
@@ -69,7 +67,7 @@ public class User extends BaseEntity {
     public void setEmail(String email) {
         this.email = email;
     }
-    @JsonbTransient
+    
     public String getPwd() {
         return pwd;
     }
