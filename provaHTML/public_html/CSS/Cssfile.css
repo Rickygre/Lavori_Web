@@ -1,0 +1,54 @@
+
+body{
+    background-color: lightskyblue;
+         
+}
+
+
+h1{
+    text-align: center;
+    color: red;
+    font-family: Arial;
+    text-decoration: underline;
+    background-color: yellow;
+    border-radius: 50%;
+    border-left: 30px;
+    border-right: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+div{
+    text-align: center;
+}
+
+.testo{
+    background-color: darksalmon;
+    font-family: cursive;
+    font-style: oblique;
+}
+
+.foto1,.foto2{
+   display: inline-block;
+   height: 300px;
+   width: 600px;
+   border-bottom-left-radius: 60%;
+   border-bottom-right-radius: 60%;
+   border-top-left-radius: 30%;
+   border-top-right-radius: 30%;
+       
+   padding-top: 5px;
+   padding-left: 5%;
+   
+   
+}
+
+h2{
+    text-align: left;
+    color: darkblue;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 20px;
+   
+}

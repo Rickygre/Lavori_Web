@@ -13,6 +13,7 @@ it/tss/blogapp/control/TagStore.class
 it/tss/blogapp/boundary/PostsResource.class
 it/tss/blogapp/PingResource.class
 it/tss/blogapp/boundary/TagsResources.class
+.netbeans_automatic_build
 it/tss/blogapp/control/UserStore.class
 it/tss/blogapp/boundary/CommentsResource.class
 it/tss/blogapp/JAXRSConfiguration.class
