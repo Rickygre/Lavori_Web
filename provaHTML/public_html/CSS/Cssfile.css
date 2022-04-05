@@ -7,10 +7,10 @@ body{
 
 h1{
     text-align: center;
-    color: red;
+    color: violet;
     font-family: Arial;
     text-decoration: underline;
-    background-color: yellow;
+    background-color: green;
     border-radius: 50%;
     border-left: 30px;
     border-right: 30px;
@@ -24,15 +24,17 @@ div{
 }
 
 .testo{
-    background-color: darksalmon;
+    background-color: greenyellow;
+    color: red;
     font-family: cursive;
     font-style: oblique;
+    font-size: 20px;
 }
 
 .foto1,.foto2{
    display: inline-block;
-   height: 300px;
-   width: 600px;
+   height: 150px;
+   width: 300px;
    border-bottom-left-radius: 60%;
    border-bottom-right-radius: 60%;
    border-top-left-radius: 30%;
@@ -51,4 +53,19 @@ h2{
     display: inline-block;
     padding: 20px;
    
+}
+h3{
+    font-family: Arial;
+    
+}
+
+#bottone{
+    color: red;
+    width: 80px;
+    height: 20px;
+}
+
+#fondo{
+    text-align: center;
+    color: red;
 }
