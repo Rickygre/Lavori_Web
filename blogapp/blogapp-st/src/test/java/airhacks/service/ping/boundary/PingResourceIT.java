@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
  */
 public class PingResourceIT {
 
-    private PingResourceClient client;
+    private PingResourceClient client; //creo client
 
     @BeforeEach
     public void init() {
@@ -28,10 +28,10 @@ public class PingResourceIT {
 
     @Test
     public void ping() {
-        Response response = this.client.ping();
+        Response response = this.client.ping(); //metodo ping con stato risposta
         int status = response.getStatus();
         assertEquals(200, status);
-        String message = response.readEntity(String.class);
+        String message = response.readEntity(String.class); // risponde una stringa
         assertNotNull(message);
         System.out.println(message);
         
