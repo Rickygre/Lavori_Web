@@ -1,5 +1,9 @@
 package airhacks.service.ping.boundary;
 import java.net.URI;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.WebTarget;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import org.eclipse.microprofile.rest.client.RestClientBuilder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,6 +19,7 @@ import org.junit.jupiter.api.Test;
 public class PingResourceIT {
 
     private PingResourceClient client; //creo client
+    URI uri;
 
     @BeforeEach
     public void init() {
@@ -36,4 +41,25 @@ public class PingResourceIT {
         System.out.println(message);
         
     }
+    
+    
+    
+    
+    @Test
+    public void pingStandardClient() {
+        Client stdClient = ClientBuilder.newClient();
+        WebTarget wt = stdClient
+                .target(this.uri)
+                .path("ping");
+        Response response = wt.request(MediaType.TEXT_PLAIN).get();
+        int status = response.getStatus();
+        assertEquals(200, status);
+        String message = response.readEntity(String.class);
+        assertNotNull(message);
+        System.out.println(message);
+        
+    }
+    
+    
+    
 }

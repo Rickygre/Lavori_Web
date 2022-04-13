@@ -15,6 +15,7 @@ it/tss/blogapp/JAXRSConfiguration.class
 it/tss/blogapp/boundary/Credential.class
 it/tss/blogapp/adapters/UserTypeAdapter.class
 it/tss/blogapp/entity/BaseEntity.class
+it/tss/blogapp/HelloServlet.class
 it/tss/blogapp/entity/Comment.class
 it/tss/blogapp/boundary/UsersResource.class
 it/tss/blogapp/PingResource.class

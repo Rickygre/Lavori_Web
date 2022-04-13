@@ -164,13 +164,14 @@ form{
 }
 .fondo #saluto3{
     font-size: 40px;
-    text-align: center;
+    
+    position: relative; right: 5px; 
     
 }
 
 .fondo #saluto2{
     font-size: 40px;
-    float: right;
+    position: relative; right: 5px; 
 }
     
 

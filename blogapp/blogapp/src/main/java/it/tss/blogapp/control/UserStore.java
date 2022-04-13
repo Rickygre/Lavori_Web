@@ -43,6 +43,7 @@ public class UserStore {
     }
 
     public void delete(Long id) {
+        
         em.remove(em.getReference(User.class, id));
     }
 

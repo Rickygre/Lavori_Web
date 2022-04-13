@@ -3,13 +3,14 @@
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/boundary/Credential.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/JWTManager.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/entity/Comment.java
-/home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/SecurityEncoding.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/boundary/PostsResource.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/adapters/UserTypeAdapter.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/control/UserStore.java
+/home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/banksystem/security/control/SecurityEncoding.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/JwtTokenException.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/boundary/TagsResources.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/entity/Tag.java
+/home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/HelloServlet.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/boundary/UsersResource.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/entity/Post.java
 /home/tss/Riccardo_g/Lavori_Web/blogapp/blogapp/src/main/java/it/tss/blogapp/JAXRSConfiguration.java

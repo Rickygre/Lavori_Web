@@ -1,7 +1,7 @@
 console.log("script start ok..");
-let txtUsr = document.getElementById("usr");
-let txtPwd = document.getElementById("pwd");
-let btnLogin = document.getElementById("btnlogin");
+let txtUsr = document.getElementById("Usr");
+let txtPwd = document.getElementById("Pwd");
+let btnLogin = document.getElementById("btnLogin");
 
 btnLogin.addEventListener("click", v => {
     v.preventDefault();
@@ -9,7 +9,7 @@ btnLogin.addEventListener("click", v => {
         usr: txtUsr.value,
         pwd: txtPwd.value
     };
-    fetch("localhost:8080/blogapp/resources/users/login", {
+    fetch("http:/localhost:8080/blogapp/resources/users/login", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -20,7 +20,36 @@ btnLogin.addEventListener("click", v => {
 
 });
 
-//console.log(JSON.stringify(credential));
+
+
+
+fetch("http:/localhost:8080/blogapp/resources/users", {
+    method: 'GET',
+    headers: {
+        'Authorization': 'Bearer' + window.localStorage.getItem("Token")
+                //'Content-Type': 'application/json'
+    }
+})
+        .then(response => {
+            if (response.ok === false) {
+
+                console.log("errore caricamento utenti");
+                console.log(response);
+            } else {
+                console.log('risposta OK')
+            }
+
+        }).then(data => data.forEach(v => console.log(v)));
+
+
+
+
+
+
+
+
+
+
 
 
 
