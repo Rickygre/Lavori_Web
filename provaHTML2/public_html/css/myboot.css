@@ -1,0 +1,14 @@
+
+.container h1{
+    color: red;
+    text-align: center;
+}
+
+#item_gallery img {
+    max-width: 200px;
+    
+}
+
+.item2 img{
+    max-width: 200px;
+}

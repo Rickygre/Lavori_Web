@@ -7,6 +7,7 @@
         <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
         <script src="Js/newjavascript.js"></script>
         <link rel="stylesheet"  href="css/style.css"> 
+        
 
     </head>
     <body>
@@ -27,16 +28,18 @@
             </div>  
             <div id="contatto">
                 <form  method="get" id="fcontatti" action="">
-
                     <input id="tmail" required name="mail" placeholder="ins indirizzo mail"/>  <br>
                     <input id="tpwd" required type="password" name="pwd" placeholder="inserisci la tua password..."/> <br> 
                     <input id="tnominativo" name="nominativo" placeholder="inserisci nome e cognome"/>  <br> 
                     <input id="tanno"  min="1990" max="2030" type="number" name="anno" placeholder="anno..."/> <br>
                     <input id="data" type="date" name="data"/> <br> 
                     sesso: maschio<input type="radio" name="sex" value="maschio"/> 
-                    femmina<input type="radio" name="sex" value="femmina"/> <br> 
+                    femmina<input type="radio" name="sex" value="femmina"/> 
+                    altro<input type="radio" name="sex" value="altro"/> 
+                    <br> 
                     sesso checkbox: <br> maschio <input type="checkbox" name="sex" value="maschio"/>
-                    femmina <input type="checkbox" name="sex" value="maschio"/> <br> 
+                    femmina <input type="checkbox" name="sex" value="femmina"/> 
+                    altro <input type="checkbox" name="sex" value="altro"/><br> 
                     <textarea id="tcommento"  placeholder="clicca qui per inserire il testo..." name="commento" rows="5" cols="100"></textarea> <br> 
                     <select id="spv" name="pv" size="4">
                         <option value="TO">Torino</option>
@@ -45,9 +48,9 @@
                         <option value="AT">Asti</option>
                         <option value="CN">Cuneo</option>
                         <option value="VBO">Verbania-Cusio-Ossiola</option>
-
+                        <option value="NO">Novara</option>
+                        <option value="VC">Vercelli</option>
                     </select>
-
                     <input type="button" id="buttonOK" value="OK"> <br>
                     <input type="submit" id="invia" value="invia"> <br>
                 </form>         
@@ -93,36 +96,36 @@
                 </table>
             </div>
         </div>
-        <footer> 
-            <div class="item_footer">
-                <h3>**Gallery**</h3>
-                <p><img src="img_progetto/milano.jpg" alt=""/> 
-                    <img src="img_progetto/Roma.jpg" alt=""/>
-                    <img src="img_progetto/londra.jpg" alt=""/>
-                    <img src="img_progetto/parigi.jpeg" alt=""/>
-                    <img src="img_progetto/milano.jpg" alt=""/>
-                    <img src="img_progetto/parigi.jpeg" alt=""/>  
-                    Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-                </p>            
-            </div>
 
+
+
+
+        <div class="item_footer">
+            <h3>**Gallery**</h3>
+            <p><img src="img_progetto/milano.jpg" alt=""/> 
+                <img src="img_progetto/Roma.jpg" alt=""/>
+                <img src="img_progetto/londra.jpg" alt=""/>
+                <img src="img_progetto/parigi.jpeg" alt=""/>
+                <img src="img_progetto/milano.jpg" alt=""/>
+
+                Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+            </p>            
+        </div>
+        <footer> 
             <div class="fondo"> <div> Prova prova Prova </div> 
                 <img src="img_progetto/firenze.jpeg" alt=""/>
                 <span id="saluto">   
                     <a href="#">saluti</a> </span> 
                 <span id="saluto2">   
-                    <a href="#">arrivederci</a> </span> 
-                <span id="saluto3">   
-                    <a href="#">arrivo</a> </span> 
-
+                    <a href="#">aggiorna</a> </span>  
                 <img src="img_progetto/Roma.jpg" alt=""/>
+                <span id="saluto3">   
+                    <a href="javascript:void(0);" onclick="alert('ciao!');" >premi qui
+                    </a> </span> 
+                <img src="img_progetto/parigi.jpeg" alt=""/> 
 
 
             </div>
-
-
-
-
         </footer>
 
     </body>
