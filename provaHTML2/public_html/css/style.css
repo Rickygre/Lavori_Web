@@ -1,23 +1,29 @@
 body{
-    background-color: lightblue;
+    background-color: lightseagreen;
+
 }
 
 header{
     background-color: blue;
 }
 h1{
-    color:blue;
+    
     text-align: center;
-    text-decoration: underline;
-    background-color: yellow;
+    font-size: 35px;
+    background-color: aqua;
     border-radius: 60%;
+    color: white;
+    text-shadow: 2px 2px 10px #000020;
+
 
 }
+
+
 .info h2{
-    color:red;
+    color:blue;
     text-decoration: underline;
     font-size: 30px;
-    font-family: TimesNewRoman;
+    font-family: Arial;
 }
 
 .info {
@@ -33,17 +39,21 @@ table{
 
 .dati th:nth-child(1) {
     width: 50%;
-    background-color: aqua;
+    background-color: yellow;
+}
+
+th{
+    background-color: yellow;
 }
 
 .dati td:nth-child(1){
-    background-color: violet;
+    background-color: lightgreen;
 }
 .dati td:nth-child(2){
-    background-color: yellow;
+    background-color: lightgreen;
 }
 .dati td:nth-child(3){
-    background-color: green;
+    background-color: lightgreen;
 }
 
 .info img{
@@ -59,22 +69,31 @@ table{
     overflow: auto;
     font-family: Arial-black;
     color: darkgreen;
+    font-size: 20px;
+    text-align: center;
 }
-
+#info2 {
+    float: right;
+     max-width: 300px;
+}
 
 
 /* gallery style*/
 .divgallery {
-    background-color: lightgreen;
+    background-color: lightblue;
     overflow: auto;
     padding:  50px;
+    
 }
 
-.itemgallery {
+
+.itemgallery{
     float: left;
     width: 33.33%;
     padding: 0px;
     border: 0px;
+    margin: auto;
+
 }
 
 .itemgallery img {
@@ -84,11 +103,9 @@ table{
 }
 
 .info p{
-    background-color: darkkhaki;
+    background-color: lightgreen;
 }
-th{
-    background-color: lightgray;
-}
+
 
 
 @media screen and (max-width:480px){
@@ -101,9 +118,65 @@ th{
 }
 
 
-form{
-    background-color: lightgray;
+
+
+.item_footer h3{
+    font-size: 30px;
+    color: yellow;
+    text-decoration: underline;
 }
+.item_footer p{
+    background-color: lightblue;
+    text-align: center;
+    
+    
+}
+.item_footer p img{
+    max-width: 300px;
+    
+    display: inline;
+}
+
+@media screen and (max-width:480px){
+    .item_footer {
+        float: none;
+        width: 100%;
+        padding: 0px;
+        border: 0px;
+    }
+}
+
+.fondo img{
+    max-width: 300px;
+}
+
+
+.fondo div{
+    font-size: 30px;
+    color: yellow;
+}
+.fondo #saluto{
+    font-size: 40px;
+    float: left;
+    
+    
+}
+.fondo #saluto3{
+    font-size: 40px;
+    
+    position: relative; right: -5px; 
+    
+}
+
+.fondo #saluto2{
+    font-size: 40px;
+    position: relative; right: 5px; 
+}
+ 
+#fcontatti{
+    background-color: aquamarine;
+}
+
 
 /* crea un tasto fluo
 button {

@@ -1,4 +1,4 @@
-function caricadati(){
+/*function caricadati(){
 
 let saluto = document.getElementById("nome");
 saluto.innerHTML = "Riccardo,";
@@ -15,4 +15,6 @@ fetch(file) //chiamata al serve che ritorna un json
                     y.fact + "<br>" + y.length);
 
 
-}
+}*/
+
+

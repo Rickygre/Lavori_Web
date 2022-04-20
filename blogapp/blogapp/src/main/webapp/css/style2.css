@@ -1,0 +1,23 @@
+
+body{
+    background-color: lightblue;
+    
+}
+
+.foto img, .foto2 img{
+    width: 1800px;
+    height: 400px;
+    padding-top: 10px;
+    
+}
+
+h1{
+    color: blue;
+    background-color: yellow;
+    border-radius: 80%;
+    text-align: center;
+    text-shadow: 2px 2px 10px #000010;
+}
+#flogin{
+    text-align: center;
+}

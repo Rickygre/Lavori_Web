@@ -3,7 +3,6 @@ package it.tss.blogapp.control;
 
 
 import it.tss.blogapp.entity.Comment;
-import it.tss.blogapp.entity.Post;
 import java.util.List;
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
