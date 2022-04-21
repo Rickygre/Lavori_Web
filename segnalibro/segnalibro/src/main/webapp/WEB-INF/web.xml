@@ -5,9 +5,9 @@
     <data-source>
         <name>java:global/jdbc/segnalibro</name>
         <class-name>org.mariadb.jdbc.MariaDbDataSource</class-name>
-        <url>jdbc:mariadb://localhost:3306/segnalibro</url>
-        <user>tss</user>
-        <password>root</password>
+        <url>jdbc:mariadb://127.0.0.1:3306/segnalibro</url>
+        <user>root</user>
+        <password>2077ira</password>
     </data-source>
     
     <context-param>

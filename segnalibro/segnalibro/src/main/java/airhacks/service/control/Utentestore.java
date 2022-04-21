@@ -6,11 +6,9 @@ import airhacks.service.entity.Utente;
 import java.util.List;
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 
 /**
  *
