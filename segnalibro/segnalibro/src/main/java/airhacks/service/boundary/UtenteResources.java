@@ -24,6 +24,8 @@ public class UtenteResources {
     @Inject
     Utentestore utenteStore;
     
+  
+    
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)

@@ -1,8 +1,8 @@
 
 package airhacks.service.boundary;
 
-import airhacks.service.control.Bookmarkstore;
-import airhacks.service.entity.Bookmark;
+import airhacks.service.control.Etichettastore;
+import airhacks.service.entity.Etichetta;
 import java.util.List;
 import javax.inject.Inject;
 import javax.validation.Valid;
@@ -18,27 +18,23 @@ import javax.ws.rs.core.MediaType;
  * @author riccardo
  */
 
-@Path("/bookmarks")
-public class BookmarkResources {
+@Path("/etichette")
+public class EtichettaResources {
     
     @Inject
-    Bookmarkstore bookmarkstore;
-    
-  
+    Etichettastore etichettaStore;
     
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Bookmark> all (){
-        return bookmarkstore.all();
-    }    
-    
-    
+    public List<Etichetta> all() {
+       return etichettaStore.all();
+    }
+   
     
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public void create(@Valid Bookmark entity) {
-        bookmarkstore.create(entity);
+    public void create(@Valid Etichetta entity) {
+        etichettaStore.create(entity);
     }
-    
     
 }
