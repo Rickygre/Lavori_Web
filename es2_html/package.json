@@ -1,8 +1,8 @@
 {
-    "name": "provaHTML2",
+    "name": "es2_html",
     "version": "1.0.0",
     "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "tss",
+    "author": "riccardo",
     "contributors": [],
     "dependencies": {}
 }
