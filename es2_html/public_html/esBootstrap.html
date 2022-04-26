@@ -25,9 +25,20 @@
                 objris.innerHTML = ris; 
                 ////innesto il valore dentro al tag
             }
+            
+            function init(){
+                const d= new Date();
+                let data = document.querySelector("#data");
+                data.innerHTML= "Sei arrivato oggi alle  " + 
+                        d.toLocaleDateString() + 
+                        " " + d.toLocaleTimeString();
+                
+            }
         </script>
     </head>
-    <body>
+    <body onload="init()">
+        <h2> esempio1</h2>
+        <h3 id="data"> </h3>
 
         <!--
         <div class="jumbotron bg-black text-danger text-center p-4 m-3 ">  
@@ -49,7 +60,7 @@
         <div>   
             <input id="tnome" placeholder="inserire nome.."/>
             <input id="tcogn" placeholder="inserire cognome.."/>
-            <input id="btnris" name="btnris" type="button" value="conferma" onclick="inviadati()">
+            <input id="btnris" name="btnris" type="button" value="conferma" onclick="inviadati()"/>
 
             <div id="divris">-----</div>
 
