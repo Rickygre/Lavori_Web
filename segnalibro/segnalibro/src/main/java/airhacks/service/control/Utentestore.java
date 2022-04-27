@@ -50,7 +50,7 @@ public class Utentestore {
     public Optional<Utente> login(Credential credential) {
         try {
             return Optional.of(em.createQuery("select e from Utente e where e.email= :usr and e.password= : pwd", Utente.class)
-                    .setParameter("usr", credential.usr)
+                    .setParameter("usr", credential.usr) //proprietà usr e valore email dell utente
                     .setParameter("pwd", SecurityEncoding.shaHash(credential.pwd))
                     .getSingleResult());
         } catch (NoResultException ex) {
