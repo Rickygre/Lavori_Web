@@ -3,7 +3,7 @@
     <persistence-unit name="mypu" transaction-type="JTA">
         <jta-data-source>java:global/jdbc/segnalibro</jta-data-source>
         <properties>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
            <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDB103Dialect"></property>
         </properties>
     </persistence-unit>

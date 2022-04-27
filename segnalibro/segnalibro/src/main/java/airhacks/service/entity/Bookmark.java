@@ -23,7 +23,7 @@ import javax.validation.constraints.NotBlank;
 @Table(name = "t_bookmarks")
 public class Bookmark extends BaseEntity {
 
-    @JsonbProperty
+   
     @NotBlank
     @Column(nullable = false)
     private String link;
