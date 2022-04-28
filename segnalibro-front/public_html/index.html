@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
 <html>
     <head>
@@ -7,19 +6,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="CSS/style1.css"/>
     </head>
-    <body>
-        
-        <form action="">
-            <div> 
-                <input id="usr" type="text" name="usr"  placeholder="inserisci nome utente...">
-                <input type="password" name="pwd" id="pwd" placeholder="inserisci password...">
-            <button id="btnlogin">Login</button>
-            <button id="btnregistra">Registrati</button>  
-            </div>
+    <body>                
+        <button onclick="getBookmarks()">carica bookmarks</button>
+        <div id="divbkms"> no result </div>
+        <hr>
+        <form id="flogin"> 
+            <input id="usr" name="usr" required placeholder="ins username o mail.."> <br>  
+            <input type="password" id="pwd" name="pwd" required placeholder="ins password.."> <br> 
+            <input type="button" onclick="login()" value="LOGIN">
+                       
         </form>
-        
-        
-        
-        <script src="index.js"></script>
+
+        <!--  <script src="/JS/index.js"></script> -->
+        <script src="JS/jsfile.js"></script>
+
+
     </body>
 </html>

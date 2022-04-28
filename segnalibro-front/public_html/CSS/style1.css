@@ -5,6 +5,7 @@ body{
 form{
     background-color: lightgreen;
     padding-top: 30px;
+    font-size: 30px;
 }
 form div {
     text-align: center;
