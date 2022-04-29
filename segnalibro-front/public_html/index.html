@@ -11,11 +11,11 @@
 
     </head>
     <body onload="init()">            
-        <h2> utente collegato: <span id="loggeduser">---</span>
+        <div class="user">utente collegato: <span id="loggeduser">---</span>
             <a href="#" id="blogout" onclick="logout()">Logout </a>
-        </h2>
+        </div>
         <button onclick="getBookmarks()">carica bookmarks</button>
-        <div id="divbkms"> no result </div>
+        <div id="divbkms">*Clicca*</div>
         <hr>
         <form id="flogin"> 
             <input id="usr" name="usr" required placeholder="ins username o mail.."> <br>  
@@ -28,7 +28,7 @@
             <input id="condiviso" name="condiviso" required placeholder="inserisci true o false.."> <br>  
             <input id="link" name="link" required placeholder="ins link.."> <br> 
             <input id="descr" name="descrizione" required placeholder="inserisci descrizione..">            
-            <input type="button" onclick="postBookmarks()" value="Bookmarks">           
+            <input type="button" onclick="postBookmarks()" value="CreaBookmarks">           
         </form>
 
 

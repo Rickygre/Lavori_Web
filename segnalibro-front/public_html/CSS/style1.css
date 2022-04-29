@@ -2,6 +2,16 @@ body{
     background-color: lightblue;
 }
 
+.user{
+    color: red;
+    font-family: Arial;
+    
+}
+
+#loggeduser{
+    color: green;
+}
+
 form{
     background-color: lightgreen;
     padding-top: 30px;
