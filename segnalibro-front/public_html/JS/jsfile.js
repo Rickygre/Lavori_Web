@@ -92,3 +92,69 @@ function init() {
                     });
 
 }
+
+
+
+
+
+function postBookmarks() {
+        let url = "http://localhost:8080/segnalibro/resources/bookmarks"; //path delle risorse 
+        let c = document.querySelector("#condiviso").value; //seleziono campo usr
+        let l = document.querySelector("#link").value;    //seleziono campo pwd
+        let d = document.querySelector("#descr").value;
+        if(c=='true')
+            c=true;
+        else
+            c=false;
+     
+        
+        
+    let postuser = {
+        "id": parseInt(sessionStorage.getItem("myid"))
+    }
+        
+    let postdata = {
+            "condiviso": c,
+            "link": l,
+            "descr":d,
+            "utente": postuser
+        }
+        
+        let auth = "Bearer " + sessionStorage.getItem("globaljwt");
+        postdata = JSON.stringify(postdata); //oggetto body diventa da ogg javascript un ogg stringa json
+        console.log(postdata);     
+        console.log(JSON.stringify(postdata)); 
+        //struttura della chiamata:
+        
+    fetch(url,
+                {
+                    method: "post",
+                    body: postdata,
+                    
+                    headers: {
+                        "Accept": 'application/json',
+                        "Content-type": 'application/json',
+                        "Authorization": auth
+                        
+                    }
+                })
+
+                .then(response => {            //come risposta richiamo la parte della risp json e la rispedisco indietro
+                    if (response.status == 401) {
+                        alert("username errato!! inserire le credenziali corrette.");
+                    } else
+                        return response.json();
+                })
+
+                .then(jsobj => {              //jsobj è un parametro che uso per tirare su risorse
+                    if (jsobj != undefined) {
+                        console.log(jsobj.toString());
+                   
+                    }
+                })
+                .catch(error => {
+                    console.log(error)
+                    document.querySelector("#loggeduser").innerHTML = "bookmarks non trovati!";
+                    });
+
+}

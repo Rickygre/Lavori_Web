@@ -28,9 +28,9 @@ public class Bookmark extends BaseEntity {
     @Column(nullable = false)
     private String link;
 
-    @JsonbProperty
+    @JsonbProperty(value = "descr")
     @NotBlank
-    @Column(nullable = false, length = 400)
+    @Column(nullable = false, length = 400, name = "descrizione")
     private String descrizione;
 
     @JsonbTransient
