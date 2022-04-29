@@ -1,6 +1,7 @@
 package airhacks.service.control;
 
 import airhacks.service.entity.Bookmark;
+import airhacks.service.entity.Utente;
 import java.util.List;
 import java.util.Optional;
 import javax.enterprise.context.RequestScoped;
@@ -37,4 +38,11 @@ public class Bookmarkstore {
         return found == null ? Optional.empty() : Optional.of(found);
     }
 
+    
+    public void eliminaBook(Long id){
+        em.remove(em.getReference(Utente.class, id));
+    }
+    
+    
+    
 }

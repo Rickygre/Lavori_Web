@@ -7,7 +7,7 @@ function getBookmarks() {  //funzione carica il file jsonArray di /bookmarks
                 ris.json())
             .then(jsobj => {
 
-                let f1 = "descrizione";
+                let f1 = "descr";
                 let arbookmark = jsobj;
                 let table = "<table>";
                 for (bookmark of arbookmark) {
@@ -157,4 +157,44 @@ function postBookmarks() {
                     document.querySelector("#loggeduser").innerHTML = "bookmarks non trovati!";
                     });
 
+}
+
+
+    function deleteBookmarks(){
+        let url = "http://localhost:8080/segnalibro/resources/bookmarks";
+        let postuser = {
+        "id": parseInt(sessionStorage.getItem("myid"))
+         }
+    
+         fetch(url, {
+        
+            "method":'delete',
+            "body": postuser,
+            headers: {
+                "Accept":'application/json',
+                "Content-type":'application/json'
+            }})
+                
+                .then(response => {            //come risposta richiamo la parte della risp json e la rispedisco indietro
+                    if (response.status == 401) {
+                        alert("bookmarks non eliminato!");
+                    } else
+                        return response.json();
+                })
+
+                .then(jsobj => {              
+                    if (response != 401) {
+                        alert("bookmark eliminato!")
+                        console.log(jsobj.toString());
+                   
+                    }
+                })
+                .catch(error => {
+                    console.log(error)
+                    document.querySelector("#delBook").innerHTML = "bookmarks non eliminati!";
+                    });
+     
+            
+             
+    
 }
