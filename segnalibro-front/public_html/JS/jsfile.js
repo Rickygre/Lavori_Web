@@ -36,16 +36,12 @@ function init() {
 
 
 
-
     function logout() {
         sessionStorage.removeItem("globaljwt"); //pulisce solo una proprietà
         sessionStorage.clear(); //pulisce tutte le sessioni di questo dominio
         let jwt = sessionStorage.getItem("globaljwt");
         window.location.href = "/segnalibro-front/index.html";
     }
-
-
-
 
 
     function login() {
@@ -92,9 +88,6 @@ function init() {
                     });
 
 }
-
-
-
 
 
 function postBookmarks() {
@@ -154,47 +147,33 @@ function postBookmarks() {
                 })
                 .catch(error => {
                     console.log(error)
-                    document.querySelector("#loggeduser").innerHTML = "bookmarks non trovati!";
+                    document.querySelector("#loggeduser").innerHTML = "bookmarks caricati correttamente!";
                     });
 
 }
 
 
     function deleteBookmarks(){
-        let url = "http://localhost:8080/segnalibro/resources/bookmarks";
-        let postuser = {
-        "id": parseInt(sessionStorage.getItem("myid"))
-         }
-    
-         fetch(url, {
+        let txtnumbook = document.querySelector("#numbook");
+        let url = "http://localhost:8080/segnalibro/resources/bookmarks/" + txtnumbook.value;
         
+        console.log(url);
+        
+        /*"id": parseInt(sessionStorage.getItem("myid"))
+         }
+        */
+         fetch(url, {
             "method":'delete',
-            "body": postuser,
+             //"body": postuser,
             headers: {
                 "Accept":'application/json',
                 "Content-type":'application/json'
             }})
                 
-                .then(response => {            //come risposta richiamo la parte della risp json e la rispedisco indietro
-                    if (response.status == 401) {
-                        alert("bookmarks non eliminato!");
-                    } else
-                        return response.json();
-                })
-
-                .then(jsobj => {              
-                    if (response != 401) {
-                        alert("bookmark eliminato!")
-                        console.log(jsobj.toString());
-                   
-                    }
-                })
+              
                 .catch(error => {
                     console.log(error)
                     document.querySelector("#delBook").innerHTML = "bookmarks non eliminati!";
-                    });
-     
-            
-             
+                    });                   
     
 }

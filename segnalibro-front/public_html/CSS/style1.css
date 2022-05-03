@@ -1,5 +1,9 @@
 body{
     background-color: lightblue;
+    
+} 
+.foto1{
+    display: inline-block;
 }
 
 .user{
@@ -21,3 +25,4 @@ form div {
     text-align: center;
     font-size: 40px;
 }
+

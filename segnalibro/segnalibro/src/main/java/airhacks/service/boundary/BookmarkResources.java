@@ -13,6 +13,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.NotFoundException;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
@@ -45,11 +46,12 @@ public class BookmarkResources {
     
     
     @DELETE
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)    
-    public void eliminaBook(Long id){
-        Bookmark found = bookmarkstore.find(id).orElseThrow(() -> new NotFoundException());
-        bookmarkstore.eliminaBook(id);
+    @Path("{id}")   
+    public void eliminaBook(@PathParam("id") Long id){
+        System.out.println("Cancelare Id: " + String.valueOf(id));
+        Bookmark found = bookmarkstore.find(id).orElseThrow(() -> new NotFoundException("bookmark non trovato. id="+ id));
+        System.out.println("Cancelare Id Trovato: " + String.valueOf(found.getId()));
+        bookmarkstore.eliminaBook(found.getId());
                 
         
     }
