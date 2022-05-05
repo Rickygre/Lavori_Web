@@ -1,7 +1,6 @@
 
 function getBookmarks() {  //funzione carica il file jsonArray di /bookmarks
-
-    let path = "http://localhost:8080/segnalibro/resources/bookmarks";
+   let path = "http://localhost:8080/segnalibro/resources/bookmarks";
     fetch(path)
             .then(ris =>
                 ris.json())
@@ -34,15 +33,12 @@ function init() {
     }
 }
 
-
-
     function logout() {
         sessionStorage.removeItem("globaljwt"); //pulisce solo una proprietà
         sessionStorage.clear(); //pulisce tutte le sessioni di questo dominio
         let jwt = sessionStorage.getItem("globaljwt");
         window.location.href = "/segnalibro-front/index.html";
     }
-
 
     function login() {
         let url = "http://localhost:8080/segnalibro/resources/utenti/login"; //path delle risorse 
@@ -88,7 +84,6 @@ function init() {
                     });
 
 }
-
 
 function postBookmarks() {
         let url = "http://localhost:8080/segnalibro/resources/bookmarks"; //path delle risorse 

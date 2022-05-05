@@ -36,6 +36,23 @@ public class BookmarkResources {
         return bookmarkstore.all();
     }    
     
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Bookmark> findByUtente(@PathParam("id") Long id) {
+        //return bookmarkstore.find(id).orElseThrow(() -> new NotFoundException());
+        return bookmarkstore.findByUtente(id);
+    }
+    
+    
+    
+    /*@GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Bookmark find(@PathParam("id") Long id) {
+        return bookmarkstore.find(id).orElseThrow(() -> new NotFoundException());
+        
+    }*/
     
     
     @POST
@@ -48,9 +65,9 @@ public class BookmarkResources {
     @DELETE
     @Path("{id}")   
     public void eliminaBook(@PathParam("id") Long id){
-        System.out.println("Cancelare Id: " + String.valueOf(id));
+        System.out.println("Cancellare Id: " + String.valueOf(id));
         Bookmark found = bookmarkstore.find(id).orElseThrow(() -> new NotFoundException("bookmark non trovato. id="+ id));
-        System.out.println("Cancelare Id Trovato: " + String.valueOf(found.getId()));
+        System.out.println("Cancellare Id Trovato: " + String.valueOf(found.getId()));
         bookmarkstore.eliminaBook(found.getId());
                 
         
