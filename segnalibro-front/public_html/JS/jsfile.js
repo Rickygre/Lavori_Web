@@ -94,9 +94,7 @@ function postBookmarks() {
             c=true;
         else
             c=false;
-     
-        
-        
+                 
     let postuser = {
         "id": parseInt(sessionStorage.getItem("myid"))
     }
