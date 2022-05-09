@@ -18,3 +18,13 @@ fetch(file) //chiamata al serve che ritorna un json
 }*/
 
 
+function conferma(){
+    let email= document.getElementById("tmail");
+    let password= document.getElementById("tpwd");
+    let nome= document.getElementById("tnome");
+    
+    console.log(email.value);
+    console.log(password.value);
+    console.log(nome.value);
+    
+}

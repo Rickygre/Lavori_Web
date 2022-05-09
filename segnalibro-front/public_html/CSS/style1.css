@@ -1,0 +1,28 @@
+body{
+    background-color: lightblue;
+    
+} 
+.foto1{
+    display: inline-block;
+}
+
+.user{
+    color: red;
+    font-family: Arial;
+    
+}
+
+#loggeduser{
+    color: green;
+}
+
+form{
+    background-color: lightgreen;
+    padding-top: 30px;
+    font-size: 30px;
+}
+form div {
+    text-align: center;
+    font-size: 40px;
+}
+

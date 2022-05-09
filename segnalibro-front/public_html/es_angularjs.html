@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>***Angular Example***</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="CSS/angular.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="JS/angularJS.js"></script>
+        <script src="JS/jwt-decode.js"></script>       
+    </head>
+    <body style="background-color:lightblue" 
+          ng-app="myApp" >
+        <div class="container" ng-controller="loginCtrl">
+            <h4>*Utente connesso*:<span>{{loggedusr}}</span></h4>
+            <a href="#" id="blogout" ng-click="logout()">Logout </a>
+            <div id="divlogin" ng-hide="logged"> 
+                <h2>Inserisci Login</h2>
+
+                <form style="background-color: lightgreen"  name="flogin">
+                    <div class="form-group">
+                        <label for="usr">Username:</label>
+                        <input ng-model="usr" type="text" class="form-control" id="usr" placeholder="Enter user" name="usr" required>
+                        <span ng-show="flogin.usr.$error.required"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input ng-model="pwd" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                        <span ng-show="flogin.pwd.$error.required"> campo richiesto </span>
+                    </div>               
+                    <button ng-disabled="flogin.usr.$dirty && flogin.usr.$invalid ||
+                                        flogin.pwd.$dirty && flogin.pwd.$invalid" ng-click="login()" class="btn btn-primary"> Submit </button>
+                </form>
+            </div>
+            <div id="divlogged" class="row" ng-show="logged">  
+                <div class="col-8">
+                    <h3>Elenco di Bookmarks </h3>
+                    <table class="table-responsive table-bordered " >
+                        <tr>
+                            <th>id</th>
+                            <th>description</th>
+                            <th>link</th>
+                            <th>condiviso</th>
+
+                        </tr>
+                        <tr ng-repeat="bk in bookmarks">
+                            <td>{{ bk.id}}</td> 
+                            <td>{{ bk.descr}}</td> 
+                            <td>{{ bk.link}}</td>
+                            <td>{{ bk.condiviso}}</td> 
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="col-4"> 
+                    <div id="divinsbkm">
+                        <h3>Inserimento Bookmark</h3>
+                        <form name="fbkm">
+                            <div class="form-group">
+                                <label for="description">Descrizione:</label>
+                                <input ng-model="descr" type="text" class="form-control" id="usr" placeholder="enter description..." name="description" required> 
+                                <span ng-show="fbkm.url.$error.required">campo richiesto</span> 
+                            </div>
+                            <div class="form-group">
+                                <label for="url">Link:</label>
+                                <input ng-model="link" type="text" class="form-control" id="url" placeholder="enter url..." name="url" required> 
+                                <span ng-show="fbkm.url.$error.required">campo richiesto</span> 
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="s1">
+                                    <input ng-model="condiviso" required type="radio" class="form-check-input" id="s1" checked name="condiviso" value="
+                                           true">Condiviso
+                                </label>
+                                <label class="form-check-label" for="s2">
+                                    <input ng-model="condiviso" required type="radio" class="form-check-input" id="s2" checked name="condiviso" value="
+                                           false">NON Condiviso
+                                </label>
+                            </div>
+                            <input type="button" ng-disabled="flogin.url.$dirty && flogin.url.$invalid ||
+                                                flogin.description.$dirty && flogin.description.$invalid"
+                                                        ng-click="creaBkm()" class="btn btn-primary" value="Send Bookmark" > <br>
+                            <input type="text" id="numbook" ng-model="iddelete" placeholder="inserisci id da rimuovere...">
+                            <input type="button" id="delBook" ng-click="EliminaBK()"  value="EliminaBookmarks">
+                        </form>
+                        <span>{{msginsbkm}} </span>
+                    </div>
+
+
+
+
+
+                </div>
+
+            </div>
+    </body>
+</html>
+

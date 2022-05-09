@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <title>segnalibro-login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/style1.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+        <script src="JS/jwt-decode.js"></script>
+        <script src="JS/jsfile.js"></script>
+
+    </head>
+    <body onload="init()">       
+        <img class="foto1" src="immagini/login.jpg" alt="" height="200" width="300"/>
+                <div class="user">utente collegato: <span id="loggeduser">---</span>
+            <a href="#" id="blogout" onclick="logout()">Logout </a>
+        </div>
+        <button onclick="getBookmarks()">carica bookmarks</button>
+        <div id="divbkms">*Clicca*</div>
+        <hr>
+        <form id="flogin"> 
+            <input id="usr" name="usr" required placeholder="ins username o mail.."> <br>  
+            <input type="password" id="pwd" name="pwd" required placeholder="ins password.."> <br> 
+            <input type="button" onclick="login()" value="LOGIN">           
+        </form>             
+        <form id="fbookmarks"> 
+            <input id="condiviso" name="condiviso" required placeholder="inserisci true o false.."> <br>  
+            <input id="link" name="link" required placeholder="ins link..">  <br>
+            <input id="descr" name="descrizione" required placeholder="inserisci descrizione..">  <br>          
+            <input type="button" onclick="postBookmarks()" value="CreaBookmarks">   <br>
+            <input type="text" id="numbook" placeholder="inserisci id da rimuovere...">
+            <input type="button" id="delBook" onclick="deleteBookmarks()" value="EliminaBookmarks">
+        </form>
+
+    </body>
+</html>
+
+
+<!-- aprire app su microprofile http://localhost:8080/segnalibro/resources/openapi-ui -->
+
+

@@ -9,10 +9,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>Prova2</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
-        <script src="Js/newjavascript.js"></script>
-        <link rel="stylesheet"  href="css/style.css"> 
-        
-
+        <script src="Js/scriptform.js"></script>
+        <link rel="stylesheet"  href="css/style.css">       
     </head>
     <body>
         <header>  
@@ -31,10 +29,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 </div>
             </div>  
             <div id="contatto">
-                <form  method="get" id="fcontatti" action="">
+                <form  method="get" id="tform" action="index2.html" >
                     <input id="tmail" required name="mail" placeholder="ins indirizzo mail"/>  <br>
                     <input id="tpwd" required type="password" name="pwd" placeholder="inserisci la tua password..."/> <br> 
-                    <input id="tnominativo" name="nominativo" placeholder="inserisci nome e cognome"/>  <br> 
+                    <input id="tnome" name="nominativo" placeholder="inserisci nome e cognome"/>  <br> 
                     <input id="tanno"  min="1990" max="2030" type="number" name="anno" placeholder="anno..."/> <br>
                     <input id="data" type="date" name="data"/> <br> 
                     sesso: maschio<input type="radio" name="sex" value="maschio"/> 
@@ -56,13 +54,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <option value="VC">Vercelli</option>
                     </select>
                     <input type="button" id="buttonOK" value="OK"> <br>
-                    <input type="submit" id="invia" value="invia"> <br>
+                    <input type="submit" id="invia" value="conferma" onclick="conferma()"> <br>
                 </form>         
             </div>
             <div class="info"> 
                 <h2> *Descrizione Londra*</h2>  
                 <p> <img src="img_progetto/londra.jpg" alt="città di Londra"/>
-
                     Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>  
             </div>
@@ -102,8 +99,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
 
 
-
-
         <div class="item_footer">
             <h3>**Gallery**</h3>
             <p><img src="img_progetto/milano.jpg" alt=""/> 
@@ -111,7 +106,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <img src="img_progetto/londra.jpg" alt=""/>
                 <img src="img_progetto/parigi.jpeg" alt=""/>
                 <img src="img_progetto/milano.jpg" alt=""/>
-
                 Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
             </p>            
         </div>
@@ -127,7 +121,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <a href="javascript:void(0);" onclick="alert('ciao!');" >premi qui
                     </a> </span> 
                 <img src="img_progetto/parigi.jpeg" alt=""/> 
-
 
             </div>
         </footer>
