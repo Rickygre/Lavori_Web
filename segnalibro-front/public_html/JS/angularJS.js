@@ -46,7 +46,8 @@ app.controller('loginCtrl',
                 };
                 $http(req).then(
                         function (response) {  //caso successo
-                            $scope.bookmarks = response.data.data;
+                            console.log(response);
+                            $scope.bookmarks = response.data;
                         },
                         function (response) {  //caso errore login
                             sessionStorage.clear();
@@ -57,9 +58,12 @@ app.controller('loginCtrl',
 
             $scope.creaBkm = function () {
                 let  myurl = "http://localhost:8080/segnalibro/resources/bookmarks/";
-                let sh=false;
+                let sh = false;
                 if ($scope.sh === "true")
                     sh = true;
+                let c = $scope.condiviso;
+                let d = $scope.descr;
+                let l = $scope.link;
                 let postuser = {
                     "id": parseInt(sessionStorage.getItem("myid"))
                 };
@@ -67,10 +71,10 @@ app.controller('loginCtrl',
                     url: myurl,
                     method: "POST",
                     data: {
-                        descr: $scope.description,
-                        link: $scope.link,
-                        condiviso: $scope.condiviso,
-                        utente:$scope.postuser
+                        condiviso: c,
+                        descr: d,
+                        link: l,
+                        utente: postuser
                     },
                     headers: {
                         "Authorization": "Bearer" + sessionStorage.getItem("myjwt"),
@@ -80,21 +84,52 @@ app.controller('loginCtrl',
 
                 };
                 $http(req).then(
-                        function (response) { //caso successo                       
-                            $scope.msginsbkm="book creato";
+                        function (response) { //caso successo   
+                            console.log(response);
+                            $scope.msginsbkm = "book inserito correttamente!";
                             $scope.getMyBkms();
-                            
+
                         },
                         function (response) {
-                            $scope.msginsbkm="book non creato";
+                            $scope.msginsbkm = "book non creato!!";
                         });
             };
 
 
+            $scope.logout = function () {
+                sessionStorage.removeItem("globaljwt"); //pulisce solo una proprietà
+                sessionStorage.clear(); //pulisce tutte le sessioni di questo dominio
+                let jwt = sessionStorage.getItem("globaljwt");
+                window.location.href = "/segnalibro-front/es_angularjs.html";
+            };
+
+            $scope.EliminaBK = function () {
+                let  myurl = "http://localhost:8080/segnalibro/resources/bookmarks/"+ $scope.iddelete;
+                console.log(myurl);
+
+                let req = {
+                    url: myurl,
+                    method: "delete",
+                    headers: {
+                        "Accept": 'application/json',
+                        "Content-type": 'application/json'
+                    }
+
+                };
+                $http(req).then(
+                        function (response) { //caso successo   
+                            console.log(response);
+                            $scope.msginsbkm = "bookmark eliminato con successo!";
+                             $scope.getMyBkms();
+                            
+
+                        },
+                        function (response) {
+                            $scope.msginsbkm = "book non eliminato!";
+                        });
 
 
-
-
+            }
 
 
         });
