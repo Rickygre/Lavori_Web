@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 h4{
     color: red;
     font-family: Arial;
@@ -20,3 +21,30 @@ table tr th{
 .col-8 .table-bordered tr{
     border:solid black 3px ;
 }
+=======
+body{
+    background-image: url("../immagini/mare.jpg");
+        height: 300px;
+        width: 400px;
+}
+
+.table-bordered{
+    border: 2px solid black;
+}
+
+h4{
+    color: red;
+}
+
+#logtxt{
+    font-size: 20px;
+    font-family: Arial;
+    color: blue;
+    text-decoration: underline;
+}
+
+h4 span{
+    color: green;
+}
+
+>>>>>>> e63944b35e6d5defa9ace1df85f02bb475ecd508

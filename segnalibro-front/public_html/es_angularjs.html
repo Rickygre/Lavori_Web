@@ -19,16 +19,20 @@
             <h4>Utente connesso:<span>{{loggedusr}}</span></h4>
             <a href="#" id="blogout" ng-click="logout()">Logout </a>
             <div id="divlogin" ng-hide="logged"> 
+<<<<<<< HEAD
                 <span id="testo"> **Inserisci Login**</span>
+=======
+                <span id="logtxt">Inserire Login</span>
+>>>>>>> e63944b35e6d5defa9ace1df85f02bb475ecd508
 
                 <form style="background-color: lightgreen"  name="flogin">
                     <div class="form-group">
-                        <label for="usr">Username:</label>
+                        <label for="usr">Username</label>
                         <input ng-model="usr" type="text" class="form-control" id="usr" placeholder="Enter user" name="usr" required>
                         <span ng-show="flogin.usr.$error.required"></span>
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Password:</label>
+                        <label for="pwd">Password</label>
                         <input ng-model="pwd" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
                         <span ng-show="flogin.pwd.$error.required"> campo richiesto </span>
                     </div>               
