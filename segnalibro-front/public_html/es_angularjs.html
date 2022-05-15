@@ -16,10 +16,10 @@
     <body style="background-color:lightblue" 
           ng-app="myApp" >
         <div class="container" ng-controller="loginCtrl">
-            <h4>*Utente connesso*:<span>{{loggedusr}}</span></h4>
+            <h4>Utente connesso:<span>{{loggedusr}}</span></h4>
             <a href="#" id="blogout" ng-click="logout()">Logout </a>
             <div id="divlogin" ng-hide="logged"> 
-                <h2>Inserisci Login</h2>
+                <span id="testo"> **Inserisci Login**</span>
 
                 <form style="background-color: lightgreen"  name="flogin">
                     <div class="form-group">
