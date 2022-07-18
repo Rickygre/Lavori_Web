@@ -51,7 +51,7 @@ app.controller('loginCtrl',
                         },
                         function (response) {  //caso errore login
                             sessionStorage.clear();
-                            $scope.loggedusr = "nessun utente trovato";
+                            $scope.loggedusr = "Utente NON Trovato!!";
                             $scope.logged = false;
                         });
             };
@@ -86,12 +86,12 @@ app.controller('loginCtrl',
                 $http(req).then(
                         function (response) { //caso successo   
                             console.log(response);
-                            $scope.msginsbkm = "book inserito correttamente!";
+                            $scope.msginsbkm = "Bookmark inserito correttamente!!";
                             $scope.getMyBkms();
 
                         },
                         function (response) {
-                            $scope.msginsbkm = "book non creato!!";
+                            $scope.msginsbkm = "ATTENZIONE book non creato!!";
                         });
             };
 
@@ -119,13 +119,13 @@ app.controller('loginCtrl',
                 $http(req).then(
                         function (response) { //caso successo   
                             console.log(response);
-                            $scope.msginsbkm = "bookmark eliminato con successo!";
+                            $scope.msginsbkm = "bookmark eliminato con successo!!!";
                              $scope.getMyBkms();
                             
 
                         },
                         function (response) {
-                            $scope.msginsbkm = "book non eliminato!";
+                            $scope.msginsbkm = "Eliminazione bookmark non riuscita!! bookmark non presente!!";
                         });
 
 

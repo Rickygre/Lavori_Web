@@ -16,14 +16,14 @@
     <body style="background-color:lightblue" 
           ng-app="myApp" >
         <div class="container" ng-controller="loginCtrl">
-            <h4>Utente connesso:<span>{{loggedusr}}</span></h4>
+            <h4>*Utente connesso:*<span>{{loggedusr}}</span></h4>
             <a href="#" id="blogout" ng-click="logout()">Logout </a>
             <div id="divlogin" ng-hide="logged"> 
-<<<<<<< HEAD
+
                 <span id="testo"> **Inserisci Login**</span>
-=======
-                <span id="logtxt">Inserire Login</span>
->>>>>>> e63944b35e6d5defa9ace1df85f02bb475ecd508
+
+               
+
 
                 <form style="background-color: lightgreen"  name="flogin">
                     <div class="form-group">
@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <label for="pwd">Password</label>
                         <input ng-model="pwd" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-                        <span ng-show="flogin.pwd.$error.required"> campo richiesto </span>
+                        <span ng-show="flogin.pwd.$error.required">*request*</span>
                     </div>               
                     <button ng-disabled="flogin.usr.$dirty && flogin.usr.$invalid ||
                                         flogin.pwd.$dirty && flogin.pwd.$invalid" ng-click="login()" class="btn btn-primary"> Submit </button>
@@ -68,12 +68,12 @@
                             <div class="form-group">
                                 <label for="description">Descrizione:</label>
                                 <input ng-model="descr" type="text" class="form-control" id="usr" placeholder="enter description..." name="description" required> 
-                                <span ng-show="fbkm.url.$error.required">campo richiesto</span> 
+                                <span ng-show="fbkm.url.$error.required">*request*</span> 
                             </div>
                             <div class="form-group">
                                 <label for="url">Link:</label>
                                 <input ng-model="link" type="text" class="form-control" id="url" placeholder="enter url..." name="url" required> 
-                                <span ng-show="fbkm.url.$error.required">campo richiesto</span> 
+                                <span ng-show="fbkm.url.$error.required">*request*</span> 
                             </div>
                             <div class="form-check-inline">
                                 <label class="form-check-label" for="s1">
@@ -87,9 +87,9 @@
                             </div>
                             <input type="button" ng-disabled="flogin.url.$dirty && flogin.url.$invalid ||
                                                 flogin.description.$dirty && flogin.description.$invalid"
-                                                        ng-click="creaBkm()" class="btn btn-primary" value="Send Bookmark" > <br>
+                                           ng-click="creaBkm()" class="btn btn-primary" value="Send Bookmark" > <br> <br>
                             <input type="text" id="numbook" ng-model="iddelete" placeholder="inserisci id da rimuovere...">
-                            <input type="button" id="delBook" ng-click="EliminaBK()"  value="EliminaBookmarks">
+                            <input type="button" id="delBook" ng-click="EliminaBK()"  value="Delete Bookmarks">
                         </form>
                         <span>{{msginsbkm}} </span>
                     </div>

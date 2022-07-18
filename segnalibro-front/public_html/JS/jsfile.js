@@ -29,7 +29,7 @@ function init() {
         document.getElementById("loggeduser").innerHTML = usr;
     } else //non loggato  
     {
-        document.getElementById("loggeduser").innerHTML = " nessun utente non loggato";
+        document.getElementById("loggeduser").innerHTML = " nessun utente loggato";
     }
 }
 
