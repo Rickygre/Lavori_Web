@@ -6,15 +6,27 @@ function getBookmarks() {  //funzione carica il file jsonArray di /bookmarks
                 ris.json())
             .then(jsobj => {
 
-                let f1 = "descr";
+                //let f1 = "descr";
                 let arbookmark = jsobj;
                 let table = "<table>";
                 for (bookmark of arbookmark) {
-                    let row = "<tr><td>"
-                            + bookmark[f1]
-                            + "</td><td>"
+                    let row = "<tr>" + 
+                            "<td>"
+                            + bookmark.id +
+                            "</td>"+
+                            "<td>"
+                            + bookmark.descr + 
+                            "</td>"+ 
+
+                            "<td>"
                             + bookmark.link +
-                            "</td></tr>";
+                            "</td>" + 
+
+                            "<td>"
+                            + bookmark.utente.email +
+                            "</td>" + 
+
+                            "</tr>";
                     table += row;
                 }
                 table += "</table>";
