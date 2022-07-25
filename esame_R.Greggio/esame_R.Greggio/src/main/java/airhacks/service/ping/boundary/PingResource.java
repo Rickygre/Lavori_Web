@@ -9,7 +9,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  *
  * @author airhacks.com
  */
-@Path("ping")
+@Path("/ping")
 public class PingResource {
 
     @Inject
@@ -18,7 +18,7 @@ public class PingResource {
 
     @GET
     public String ping() {
-        return this.message + " Jakarta EE 8 with MicroProfile 3+!";
+        return this.message + " Jakarta EE 8 with MicroProfile 3+! IL SERVIZIO È ATTIVO!";
     }
 
 }

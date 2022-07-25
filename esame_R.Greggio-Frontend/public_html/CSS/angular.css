@@ -1,0 +1,48 @@
+
+h4{
+    color: red;
+    font-family: Arial;
+}
+
+h4 span{
+    color: green;
+}
+
+
+ #testo{
+    font-family: Arial;
+    color: violet;
+}
+
+table tr th{
+    color: blue;
+}
+
+.col-8 .table-bordered tr{
+    border:solid blue 2px ;
+}
+
+
+.table-bordered{
+    border: 2px solid black;
+}
+
+h4{
+    color: red;
+}
+
+#logtxt{
+    font-size: 20px;
+    font-family: Arial;
+    color: blue;
+    text-decoration: underline;
+}
+
+h4 span{
+    color: green;
+}
+
+.form-group span{
+    color: red;
+    
+}
