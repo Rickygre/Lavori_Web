@@ -104,7 +104,7 @@ app.controller('loginCtrl',
             };
 
             $scope.EliminaBK = function () {
-                let  myurl = "http://localhost:8080/esame_R.Greggio/resources/segnalibri/"+ $scope.iddelete;
+                let  myurl = "http://localhost:8080/esame_R.Greggio/resources/segnalibri/" + $scope.iddelete;
                 console.log(myurl);
 
                 let req = {
@@ -120,14 +120,12 @@ app.controller('loginCtrl',
                         function (response) { //caso successo   
                             console.log(response);
                             $scope.msginsbkm = "segnalibro eliminato con successo!!!";
-                             $scope.getMyBkms();
-                            
+                            $scope.getMyBkms();
 
                         },
                         function (response) {
                             $scope.msginsbkm = "Eliminazione segnalibro non riuscita!! segnalibro non presente!!";
                         });
-
 
             }
 

@@ -1,25 +1,33 @@
 
+body{
+    background-image: url("../immagini/mare.jpg");
+
+}
+
 h4{
     color: red;
     font-family: Arial;
 }
 
 h4 span{
-    color: green;
+    color: darkblue;
 }
 
 
- #testo{
+#testo{
     font-family: Arial;
-    color: violet;
+    color: blue;
+    font-size: 25px;
+    background-color: lightblue;
 }
 
 table tr th{
-    color: blue;
+    color: darkred;
 }
 
 .col-8 .table-bordered tr{
-    border:solid blue 2px ;
+    border:solid yellow 3px ;
+    background-color: lightblue;
 }
 
 
@@ -39,10 +47,35 @@ h4{
 }
 
 h4 span{
-    color: green;
+    color: darkblue;
+    background-color: aquamarine;
 }
 
 .form-group span{
     color: red;
-    
+
+}
+
+.col-8 h3{
+    color: darkblue;
+    text-decoration: underline;
+    background-color: aquamarine;
+}
+
+.col-4 h3{
+    color: darkblue;
+    text-decoration: underline;
+    background-color: aquamarine;
+}
+
+
+.form-group label {
+    color: darkblue;
+}
+
+.avviso{
+    color: red;
+    font-family: Arial;
+    font-size: 20px;
+
 }
